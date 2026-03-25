@@ -1,23 +1,14 @@
 :root{
-
-  --main:#0D2454;
-
-  --accent:#00448d;
-
-  --gold:#F3E195;
-
-  --bg:#fffff;
-
-  --panel:#0B1E44;
-
-  --text:#FFFFFF;
-
-  --muted:#C5C7CD;
-
-  --line:rgba(255,255,255,.14);
-
+ --main:#0D2454;
+ --accent:#00448d;
+ --gold:#F3E195;
+ /* ここ変更 */
+ --bg:#ffffff;
+ --panel:#0B1E44;
+ --text:#1a1a1a;   /* ← 白背景なので黒系に変更 */
+ --muted:#555;
+ --line:rgba(0,0,0,.1);
 }
-
 *{
 
   box-sizing:border-box;
