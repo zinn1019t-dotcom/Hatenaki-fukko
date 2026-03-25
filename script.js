@@ -1,140 +1,129 @@
-const archiveData = [
+// ===== 現在ページをヘッダーで判定 =====
 
-  {
+document.addEventListener("DOMContentLoaded", () => {
 
-    round: "第1回企画",
+  const navLinks = document.querySelectorAll(".header-nav a");
 
-    category: "支援団体",
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
-    title: "災害NGO 結 様",
+  navLinks.forEach(link => {
 
-    description: "現場の課題構造と、実効性のある支援のあり方について。",
+    const href = link.getAttribute("href");
 
-    link: "https://www.instagram.com/nsf_pjrecovering/p/DNfcw5gxUsM/"
+    if (href === currentPath) {
 
-  },
-
-  {
-
-    round: "第2回企画",
-
-    category: "行政",
-
-    title: "石川県 創造的復興推進課 様",
-
-    description: "行政が進める復興政策の現在地と、未来への展望。",
-
-    link: "https://www.instagram.com/nsf_pjrecovering/p/DQpv1qKk9r2/"
-
-  },
-
-  {
-
-    round: "第3回企画",
-
-    category: "教育",
-
-    title: "東京大学大学院情報学環 中丸和 様",
-
-    description: "総合防災情報研究センター特任研究員 中丸様による、災害時における教育の役割。",
-
-    link: "https://www.instagram.com/nsf_pjrecovering/p/DTXnLUakX17/"
-
-  }
-
-];
-
-const archiveGrid = document.getElementById("archiveGrid");
-
-const filterButtons = document.querySelectorAll(".filter-btn");
-
-const revealElements = document.querySelectorAll(".reveal");
-
-function renderArchive(filter = "all") {
-
-  if (!archiveGrid) return;
-
-  const filteredItems = filter === "all"
-
-    ? archiveData
-
-    : archiveData.filter(item => item.category === filter);
-
-  archiveGrid.innerHTML = "";
-
-  if (filteredItems.length === 0) {
-
-    archiveGrid.innerHTML = `
-<div class="empty-message">
-
-        該当するアーカイブはまだありません。
-</div>
-
-    `;
-
-    return;
-
-  }
-
-  filteredItems.forEach(item => {
-
-    const card = document.createElement("a");
-
-    card.className = "archiveItem";
-
-    card.href = item.link;
-
-    card.target = "_blank";
-
-    card.rel = "noopener noreferrer";
-
-    card.innerHTML = `
-<div class="pill">${item.round}</div>
-<h3>${item.title}</h3>
-<p>${item.description}</p>
-<div class="view-link">${item.category} / View Post →</div>
-
-    `;
-
-    archiveGrid.appendChild(card);
-
-  });
-
-}
-
-filterButtons.forEach(button => {
-
-  button.addEventListener("click", () => {
-
-    filterButtons.forEach(btn => btn.classList.remove("active"));
-
-    button.classList.add("active");
-
-    renderArchive(button.dataset.filter);
-
-  });
-
-});
-
-const observer = new IntersectionObserver((entries) => {
-
-  entries.forEach(entry => {
-
-    if (entry.isIntersecting) {
-
-      entry.target.classList.add("show");
+      link.classList.add("active");
 
     }
 
   });
 
-}, {
+  // ===== アーカイブデータ =====
 
-  threshold: 0.15
+  const archiveData = [
+
+    {
+
+      title: "被災地支援ネットワーク",
+
+      category: "支援団体",
+
+      desc: "現地と連携しながら継続的な支援体制づくりに取り組んだ記録。"
+
+    },
+
+    {
+
+      title: "自治体との協働提言",
+
+      category: "行政",
+
+      desc: "復興と防災に関する提案を行政へ届けたプロジェクト。"
+
+    },
+
+    {
+
+      title: "防災教育ワークショップ",
+
+      category: "教育",
+
+      desc: "若い世代に向けて防災意識を広げるための学習企画。"
+
+    },
+
+    {
+
+      title: "避難環境改善アクション",
+
+      category: "支援団体",
+
+      desc: "避難所環境の改善に向けた提案と発信を行った取り組み。"
+
+    },
+
+    {
+
+      title: "地域連携ヒアリング",
+
+      category: "行政",
+
+      desc: "地域の課題や要望を整理し、今後の連携の方向性をまとめた活動。"
+
+    },
+
+    {
+
+      title: "震災の記憶継承プロジェクト",
+
+      category: "教育",
+
+      desc: "震災の学びを次世代へ伝えるための発信・記録活動。"
+
+    }
+
+  ];
+
+  const archiveGrid = document.getElementById("archiveGrid");
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+
+  function renderArchive(filter = "all") {
+
+    if (!archiveGrid) return;
+
+    const filtered = filter === "all"
+
+      ? archiveData
+
+      : archiveData.filter(item => item.category === filter);
+
+    archiveGrid.innerHTML = filtered.map(item => `
+<article class="archive-card">
+<div class="archive-tag">${item.category}</div>
+<h3>${item.title}</h3>
+<p>${item.desc}</p>
+</article>
+
+    `).join("");
+
+  }
+
+  filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+
+      button.classList.add("active");
+
+      renderArchive(button.dataset.filter);
+
+    });
+
+  });
+
+  renderArchive();
 
 });
-
-revealElements.forEach(element => observer.observe(element));
-
-renderArchive();
  
