@@ -529,4 +529,77 @@ body{
   }
 
 }
+ .header-nav a{
+
+  position:relative;
+
+  color:rgba(255,255,255,.7);
+
+  text-decoration:none;
+
+  padding-bottom:4px;
+
+  transition:0.2s;
+
+}
+
+/* 通常ホバー */
+
+.header-nav a:hover{
+
+  color:#fff;
+
+}
+
+/* 今いるページ */
+
+.header-nav a.active{
+
+  color:#fff;
+
+  font-weight:700;
+
+}
+
+/* 下線アニメーション */
+
+.header-nav a.active::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:0;
+
+  width:100%;
+
+  height:2px;
+
+  background:#F3E195;
+
+  border-radius:2px;
+
+}
+
+/* ホバー時にも線出す（任意） */
+
+.header-nav a:hover::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:0;
+
+  width:100%;
+
+  height:2px;
+
+  background:rgba(255,255,255,.5);
+
+}
  
