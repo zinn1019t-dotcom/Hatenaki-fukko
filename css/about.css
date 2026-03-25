@@ -721,4 +721,129 @@
   }
 
 }
+ /* ===== 見やすさ改善パッチ ===== */
+
+/* セクション背景を分離 */
+
+.about-pillars,
+
+.about-projects{
+
+  background:#ffffff;
+
+  padding:40px 30px;
+
+  border-radius:24px;
+
+  margin-bottom:40px;
+
+}
+
+/* 見出しを強調 */
+
+.about-section-head h2{
+
+  font-size:26px;
+
+  font-weight:900;
+
+  color:#0D2454;
+
+}
+
+/* ===== カード明るくする ===== */
+
+.pillar-card{
+
+  background:linear-gradient(135deg, #1b3f7c 0%, #0f2e5c 100%);
+
+}
+
+.about-project-card{
+
+  background:linear-gradient(135deg, #1b3f7c 0%, #0f2e5c 100%);
+
+}
+
+/* ===== テキスト改善 ===== */
+
+.pillar-card h3,
+
+.about-project-card h3{
+
+  font-size:20px;
+
+  color:#ffffff;
+
+}
+
+.pillar-card p,
+
+.about-project-card p{
+
+  font-size:15px;
+
+  line-height:1.9;
+
+  color:#f0f4ff;
+
+}
+
+/* ===== アイコン強調 ===== */
+
+.pillar-icon{
+
+  font-size:34px;
+
+}
+
+/* ===== カード余白強化 ===== */
+
+.pillar-card,
+
+.about-project-card{
+
+  padding:28px;
+
+}
+
+/* ===== ホバーを分かりやすく ===== */
+
+.pillar-card:hover,
+
+.about-project-card:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+}
+
+/* ===== スマホ調整 ===== */
+
+@media (max-width:768px){
+
+  .about-pillars,
+
+  .about-projects{
+
+    padding:24px 18px;
+
+  }
+
+  .about-section-head h2{
+
+    font-size:22px;
+
+  }
+
+  .pillar-card h3,
+
+  .about-project-card h3{
+
+    font-size:18px;
+
+  }
+
+}
  
