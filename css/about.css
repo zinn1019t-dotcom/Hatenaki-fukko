@@ -341,4 +341,11 @@
   }
 
 }
- 
+ .about-title{
+ color:#F3E195 !important;
+}
+.project-tag{
+ color:#0D2454 !important;
+ background:#F3E195 !important;
+ border:none;
+}
