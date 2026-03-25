@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FAQ｜NSF PROJECTs</title>
 <link rel="stylesheet" href="css/faq.css">
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0D2454">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
 <body>
 <!-- ===== HEADER ===== -->
@@ -20,6 +24,7 @@
 </nav>
 </div>
 </header>
+
 <section class="fc-wrap">
 <!-- FAQ -->
 <section id="faq" class="faq-panel reveal">
@@ -27,6 +32,7 @@
 <h2>FOR PARTICIPANTS</h2>
 <p>参加を検討されている皆様へ</p>
 </div>
+
 <div class="faq-list">
 <div class="faq-item open">
 <button class="faq-question">
@@ -41,6 +47,7 @@
 </div>
 </div>
 </div>
+
 <div class="faq-item">
 <button class="faq-question">
 <span class="faq-mark q">Q.</span>
@@ -54,6 +61,7 @@
 </div>
 </div>
 </div>
+
 <div class="faq-item">
 <button class="faq-question">
 <span class="faq-mark q">Q.</span>
@@ -67,6 +75,7 @@
 </div>
 </div>
 </div>
+
 <div class="faq-item">
 <button class="faq-question">
 <span class="faq-mark q">Q.</span>
@@ -82,6 +91,7 @@
 </div>
 </div>
 </section>
+
 <!-- CONTACT -->
 <section id="contact" class="contact-panel reveal">
 <h3>あなたの「気になる」を、<br>カタチに。</h3>
@@ -92,9 +102,11 @@
 <br>・ご入力いただいた個人情報は、お問い合わせへの回答以外の目的には使用いたしません。
 活動の記録については、公式Instagram（@nsf_pjrecovering）も併せてご覧ください。<br>福島プロジェクトの詳細や、参加への小さなお悩みなど、どのようなことでもお気軽にご相談ください。
 </p>
+
 <a href="https://forms.gle/FSCKEcuDfEWB7CbCA" target="_blank" class="contact-main-btn">
         ✉️ お問い合わせフォーム
 </a>
+
 <div class="contact-sub">
 <p>もっと気軽に相談したい方はDMでも受付中</p>
 <a href="https://www.instagram.com/nsf_pjrecovering/" target="_blank" class="contact-sub-btn">
@@ -103,7 +115,16 @@
 </div>
 </section>
 </section>
+
 <script src="js/faq.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("SW登録成功"))
+      .catch(err => console.log("SW失敗", err));
+  });
+}
+</script>
 </body>
 </html>
- 
