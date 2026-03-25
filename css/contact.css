@@ -1,25 +1,26 @@
 :root{
- --main:#0D2454;
- --accent:#00448d;
- --gold:#F3E195;
- /* ここ変更 */
- --bg:#ffffff;
- --panel:#0B1E44;
- --text:#1a1a1a;   /* ← 白背景なので黒系に変更 */
- --muted:#555;
- --line:rgba(0,0,0,.1);
+
+  --main:#0D2454;
+
+  --accent:#00448d;
+
+  --gold:#F3E195;
+
+  /* 白ベース */
+
+  --bg:#ffffff;
+
+  --panel:#ffffff;
+
+  --text:#1a1a1a;
+
+  --muted:#6b7280;
+
+  --line:rgba(0,0,0,.08);
+
 }
-*{
 
-  box-sizing:border-box;
-
-}
-
-html{
-
-  scroll-behavior:smooth;
-
-}
+/* ===== 全体 ===== */
 
 body{
 
@@ -33,111 +34,19 @@ body{
 
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 
 .site-header{
 
   background:linear-gradient(135deg,var(--main),var(--accent));
 
-  padding:12px 20px;
-
-  position:sticky;
-
-  top:0;
-
-  z-index:1000;
-
 }
 
-.header-inner{
-
-  max-width:1000px;
-
-  margin:auto;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  gap:20px;
-
-}
-
-.header-logo{
-
-  color:#fff;
-
-  font-weight:900;
-
-  text-decoration:none;
-
-  font-size:18px;
-
-}
-
-.header-nav{
-
-  display:flex;
-
-  gap:16px;
-
-  flex-wrap:wrap;
-
-}
-
-.header-nav a{
-
-  color:rgba(255,255,255,.74);
-
-  text-decoration:none;
-
-  font-size:14px;
-
-  position:relative;
-
-}
-
-.header-nav a:hover{
-
-  color:#fff;
-
-}
-
-.header-nav a.active{
-
-  color:#fff;
-
-  font-weight:700;
-
-}
-
-.header-nav a.active::after{
-
-  content:"";
-
-  position:absolute;
-
-  left:0;
-
-  bottom:-4px;
-
-  width:100%;
-
-  height:2px;
-
-  background:var(--gold);
-
-}
-
-/* CONTACT */
+/* ===== CONTACT ===== */
 
 .contact-wrap{
 
   padding:80px 20px;
-
-  line-height:1.8;
 
 }
 
@@ -149,337 +58,67 @@ body{
 
 }
 
-.contact-header{
-
-  text-align:center;
-
-  margin-bottom:40px;
-
-}
+/* タイトル */
 
 .contact-header h2{
 
-  font-size:32px;
-
-  color:var(--gold);
-
-  margin:0 0 16px;
-
-  letter-spacing:.1em;
-
-  font-weight:800;
+  color:var(--main);
 
 }
 
 .contact-line{
 
-  width:40px;
-
-  height:2px;
-
-  background:var(--gold);
-
-  margin:0 auto 24px;
+  background:var(--main);
 
 }
 
-.contact-header p{
+/* ===== カード（重要修正） ===== */
 
-  font-size:15px;
-
-  color:var(--muted);
-
-  max-width:540px;
-
-  margin:auto;
-
-}
-
-.contact-info-grid{
-
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:20px;
-
-  margin-bottom:28px;
-
-}
-
-.contact-info-card{
-
-  background:var(--panel);
-
-  border:1px solid var(--line);
-
-  border-radius:22px;
-
-  padding:24px 22px;
-
-  box-shadow:0 12px 32px rgba(0,0,0,.18);
-
-}
-
-.contact-info-card h3{
-
-  margin:0 0 14px;
-
-  color:var(--gold);
-
-  font-size:18px;
-
-  font-weight:800;
-
-}
-
-.contact-info-card ul{
-
-  margin:0;
-
-  padding-left:18px;
-
-}
-
-.contact-info-card li{
-
-  color:var(--text);
-
-  font-size:14px;
-
-  margin-bottom:8px;
-
-}
-
-.contact-subtext{
-
-  text-align:center;
-
-  color:var(--muted);
-
-  font-size:14px;
-
-  margin:0 0 28px;
-
-}
+.contact-info-card,
 
 .contact-panel{
 
-  background:var(--panel);
+  background:#ffffff;
 
   border:1px solid var(--line);
 
-  border-radius:32px;
-
-  padding:50px 30px;
-
-  text-align:center;
-
-  box-shadow:0 20px 60px rgba(0,0,0,.3);
-
-}
-
-.contact-desc{
-
-  font-size:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
 
   color:var(--text);
 
-  margin-bottom:32px;
+}
 
-  opacity:.9;
+/* 見出し */
+
+.contact-info-card h3{
+
+  color:var(--main);
 
 }
+
+/* ===== ボタン ===== */
 
 .contact-btn{
 
-  display:inline-flex;
+  background:linear-gradient(135deg,#0D2454,#00448d);
 
-  align-items:center;
-
-  justify-content:center;
-
-  gap:10px;
-
-  padding:16px 42px;
-
-  background:var(--gold);
-
-  color:var(--bg);
-
-  text-decoration:none;
-
-  font-weight:800;
-
-  font-size:16px;
-
-  border-radius:50px;
-
-  transition:transform .3s ease, box-shadow .3s ease, opacity .3s ease;
-
-  box-shadow:0 8px 20px rgba(243,225,149,.15);
+  color:#fff;
 
 }
 
-.contact-btn:hover{
-
-  transform:translateY(-3px);
-
-  box-shadow:0 12px 25px rgba(243,225,149,.25);
-
-}
-
-.contact-email{
-
-  margin-top:40px;
-
-  padding-top:32px;
-
-  border-top:1px solid var(--line);
-
-}
-
-.contact-email-label{
-
-  font-size:12px;
-
-  color:var(--muted);
-
-  display:block;
-
-  margin-bottom:8px;
-
-  letter-spacing:.05em;
-
-}
+/* メール */
 
 .contact-email a{
 
-  color:var(--gold);
-
-  text-decoration:none;
-
-  font-family:'SF Mono','Courier New',monospace;
-
-  font-size:16px;
-
-  font-weight:500;
-
-  transition:opacity .3s ease;
+  color:var(--main);
 
 }
 
-.contact-email a:hover{
-
-  opacity:.7;
-
-}
-
-.contact-note{
-
-  text-align:center;
-
-  margin-top:32px;
-
-}
+/* 注意文 */
 
 .contact-note p{
 
-  font-size:12px;
-
   color:var(--muted);
-
-  line-height:2;
-
-  opacity:.8;
-
-  margin:0;
-
-}
-
-/* reveal */
-
-.reveal{
-
-  opacity:0;
-
-  transform:translateY(24px);
-
-  transition:opacity .7s ease, transform .7s ease;
-
-}
-
-.reveal.show{
-
-  opacity:1;
-
-  transform:translateY(0);
-
-}
-
-/* responsive */
-
-@media (max-width:768px){
-
-  .header-inner{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:10px;
-
-  }
-
-  .header-nav{
-
-    gap:10px 14px;
-
-  }
-
-  .contact-wrap{
-
-    padding:60px 16px;
-
-  }
-
-  .contact-header h2{
-
-    font-size:28px;
-
-  }
-
-  .contact-info-grid{
-
-    grid-template-columns:1fr;
-
-  }
-
-  .contact-panel{
-
-    padding:36px 20px;
-
-    border-radius:24px;
-
-  }
-
-  .contact-btn{
-
-    width:100%;
-
-    max-width:320px;
-
-    padding:16px 24px;
-
-  }
-
-  .contact-email a{
-
-    font-size:14px;
-
-    word-break:break-all;
-
-  }
 
 }
  
