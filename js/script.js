@@ -110,6 +110,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderArchive();
 
 });
-Forsiden
-Våre IT konsulenter har lang erfaring fra forskjellige datateknologier og løsninger. Item leverer back-end og front-end programmering, alt fra datastrømming til skreddersydde løsninger for ditt sel...
- 
