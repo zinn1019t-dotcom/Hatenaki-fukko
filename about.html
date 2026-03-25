@@ -6,11 +6,18 @@
 <title>NSF PROJECTsについて｜果てなき復興プロジェクト</title>
 <link rel="stylesheet" href="css/about.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0D2454">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
+
 <body>
+
 <header class="site-header">
 <div class="header-inner">
 <a href="index.html" class="header-logo">NSF PROJECTs</a>
+
 <nav class="header-nav">
 <a href="index.html">ホーム</a>
 <a href="fukushima.html">新テーマ</a>
@@ -20,93 +27,112 @@
 </nav>
 </div>
 </header>
+
 <div class="wrap">
+
 <!-- HERO -->
 <section class="about-hero reveal">
 <div class="about-hero-inner">
 <img src="https://lh3.googleusercontent.com/d/1FlXsTtHDSgHOXnwRGMdjipwpPn7nd57A" class="about-logo">
 <h1 class="about-title">NSF PROJECTs</h1>
 <div class="about-divider"></div>
+
 <p class="about-lead">
-
 令和6年能登半島地震を受け、全国から467名の学生が集結。<br>
-
 「震災前の当たり前を取り戻す」ことを掲げ、次世代の視点で復興と防災に挑む学生団体です。
 </p>
 </div>
 </section>
+
 <!-- STATS -->
 <section class="about-stats reveal">
 <div class="about-stats-grid">
+
 <div class="about-stat-card">
 <div class="about-stat-num" data-count="467">467</div>
 <div class="about-stat-label">参加学生数</div>
 </div>
+
 <div class="about-stat-card">
 <div class="about-stat-num" data-count="12">12</div>
 <div class="about-stat-label">主要プロジェクト</div>
 </div>
+
 </div>
 </section>
+
 <!-- PROJECTS -->
 <section class="about-projects reveal">
 <div class="about-section-head">
 <h2>主要プロジェクト</h2>
 <div class="line"></div>
 </div>
+
 <div class="about-project-list">
+
 <div class="about-project-card">
 <div class="project-tag">生活支援・防災</div>
 <h3>Mamoneru & Mamomizu</h3>
 <p>
-
 避難所での「雑魚寝」解消に向け、段ボールベッド供給協定を自治体に働きかけ、
-
 災害関連死を防ぐ環境づくりを推進しています。
 </p>
 </div>
+
 <div class="about-project-card">
 <div class="project-tag">文化復興・広報</div>
 <h3>能登の再発見と復興</h3>
 <p>
-
 郷土料理や伝統工芸の魅力を若者の感性で発信し、
-
 能登を「訪れるべき場所」として再定義。
 </p>
 </div>
+
 <div class="about-project-card">
 <div class="project-tag">調査・発信</div>
 <h3>果てなき復興プロジェクト</h3>
 <p>
-
 被災地の現状を自らの視点で捉え直し、
-
 学び・発信・提言を通じて復興を“終わらせない”ための取り組みを展開しています。
 </p>
 </div>
+
 </div>
 </section>
+
 <!-- FOLLOW -->
 <section class="about-follow reveal">
 <p class="about-follow-label">FOLLOW US</p>
+
 <a href="https://www.instagram.com/2024nsfproject/"
-
 target="_blank"
-
 class="btn-action">
 
 📸 Official Instagram
 </a>
 </section>
+
 <section class="about-note reveal">
 <p>実効性のある活動を展開しています</p>
 </section>
+
 <div class="about-back reveal">
 <a href="index.html" class="btn-action">ホームへ戻る</a>
 </div>
+
 </div>
+
 <script src="js/script.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("SW登録成功"))
+      .catch(err => console.log("SW失敗", err));
+  });
+}
+</script>
+
 </body>
 </html>
- 
