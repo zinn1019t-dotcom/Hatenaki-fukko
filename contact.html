@@ -5,11 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>お問い合わせ｜NSF PROJECTs</title>
 <link rel="stylesheet" href="css/contact.css">
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0D2454">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
+
 <body>
+
 <header class="site-header">
 <div class="header-inner">
 <a href="index.html" class="header-logo">NSF　果てなき復興プロジェクト</a>
+
 <nav class="header-nav">
 <a href="index.html">ホーム</a>
 <a href="fukushima.html">新テーマ</a>
@@ -19,19 +26,22 @@
 </nav>
 </div>
 </header>
+
 <section class="contact-wrap">
 <div class="contact-inner">
+
 <div class="contact-header reveal">
 <h2>Contact Us</h2>
 <div class="contact-line"></div>
+
 <p>
-
           プロジェクトへのご質問、取材・連携のご相談、または「自分にできることを見つけたい」という中高生の方など、
-
           どうぞお気軽にお寄せください。
 </p>
 </div>
+
 <div class="contact-info-grid reveal">
+
 <div class="contact-info-card">
 <h3>📩 対応内容</h3>
 <ul>
@@ -43,6 +53,7 @@
 <li>イベント・講演のご相談</li>
 </ul>
 </div>
+
 <div class="contact-info-card">
 <h3>🎯 ご相談いただける方</h3>
 <ul>
@@ -52,43 +63,59 @@
 <li>企業・団体・メディア関係者</li>
 </ul>
 </div>
-</div>
-<p class="contact-subtext reveal">
 
+</div>
+
+<p class="contact-subtext reveal">
         果てなき復興プロジェクト単体だけでなく、団体全体や加入に関するご相談も受け付けています。
 </p>
+
 <div class="contact-panel reveal">
+
 <p class="contact-desc">
 <strong>果てなき復興プロジェクトに関する問い合わせ</strong><br>
 お問い合わせの前にご確認<br>
 ・お問い合わせ内容によっては、回答までにお時間をいただく場合や、お答えできかねる場合がございます。<br>
- ・ご入力いただいた個人情報は、お問い合わせへの回答以外の目的には使用いたしません。<br>
-活動の記録については、公式Instagram（@nsf_pjrecovering）も併せてご覧ください。
-<br>3日以内を目安に丁寧にご返信させていただきます。
+・ご入力いただいた個人情報は、お問い合わせへの回答以外の目的には使用いたしません。<br>
+活動の記録については、公式Instagram（@nsf_pjrecovering）も併せてご覧ください。<br>
+3日以内を目安に丁寧にご返信させていただきます。
 </p>
+
 <a href="https://forms.gle/FSCKEcuDfEWB7CbCA" target="_blank" rel="noopener" class="contact-btn">
 <span>✉️</span>
 <span>お問い合わせフォーム</span>
 </a>
+
 <div class="contact-email">
 <span class="contact-email-label">DIRECT EMAIL</span>
 <a href="mailto:nsf.pjrecovering0524@gmail.com">
-
             nsf.pjrecovering0524@gmail.com
 </a>
 </div>
+
 </div>
+
 <div class="contact-note reveal">
 <p>
-
           ※フォーム送信後、自動返信メールが届かない場合は、<br>
-
           迷惑メールフォルダのご確認、または上記アドレスまでご連絡をお願いいたします。
 </p>
 </div>
+
 </div>
 </section>
+
 <script src="js/contact.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("SW登録成功"))
+      .catch(err => console.log("SW失敗", err));
+  });
+}
+</script>
+
 </body>
 </html>
-
