@@ -6,6 +6,16 @@
 
   --gold:#F3E195;
 
+  --bg:#ffffff;
+
+  --text:#14213d;
+
+  --sub:#5b6475;
+
+  --line:#d9e2f0;
+
+  --cardText:#ffffff;
+
 }
 
 body{
@@ -14,9 +24,9 @@ body{
 
   font-family:'Noto Sans JP',sans-serif;
 
-  background:#0b0f1a;
+  background:var(--bg);
 
-  color:#fff;
+  color:var(--text);
 
 }
 
@@ -24,9 +34,11 @@ body{
 
 .site-header{
 
-  background:#000;
+  background:linear-gradient(135deg,var(--main),var(--accent));
 
   padding:12px 20px;
+
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
 
 }
 
@@ -38,6 +50,10 @@ body{
 
   align-items:center;
 
+  max-width:1100px;
+
+  margin:0 auto;
+
 }
 
 .header-logo{
@@ -48,17 +64,35 @@ body{
 
   text-decoration:none;
 
+  font-size:1.1rem;
+
+  letter-spacing:.04em;
+
+}
+
+.header-nav{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+
 }
 
 .header-nav a{
 
-  color:#aaa;
-
-  margin-left:15px;
+  color:rgba(255,255,255,.8);
 
   text-decoration:none;
 
+  font-size:.95rem;
+
+  transition:.2s ease;
+
 }
+
+.header-nav a:hover,
 
 .header-nav a.active{
 
@@ -66,15 +100,31 @@ body{
 
 }
 
+/* WRAP */
+
+.wrap{
+
+  max-width:1100px;
+
+  margin:0 auto;
+
+  padding:0 20px 50px;
+
+  box-sizing:border-box;
+
+}
+
 /* HERO */
 
 .about-hero{
 
-  margin:30px;
+  margin:30px 0 40px;
 
-  border-radius:20px;
+  border-radius:24px;
 
   overflow:hidden;
+
+  box-shadow:0 14px 36px rgba(13,36,84,.12);
 
 }
 
@@ -82,15 +132,21 @@ body{
 
   background:linear-gradient(135deg,var(--main),var(--accent));
 
-  padding:60px 20px;
+  padding:60px 24px;
 
   text-align:center;
 
 }
 
+.about-logo-wrap{
+
+  margin-bottom:18px;
+
+}
+
 .about-logo{
 
-  width:90px;
+  width:96px;
 
   border-radius:50%;
 
@@ -98,35 +154,49 @@ body{
 
   padding:6px;
 
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+
 }
 
 .about-title{
 
-  font-size:32px;
+  margin:0;
+
+  font-size:34px;
 
   font-weight:900;
 
   color:var(--gold);
 
+  letter-spacing:.03em;
+
 }
 
 .about-divider{
 
-  width:60px;
+  width:64px;
 
-  height:2px;
+  height:3px;
 
   background:var(--gold);
 
-  margin:10px auto 20px;
+  margin:14px auto 22px;
+
+  border-radius:999px;
 
 }
 
 .about-lead{
 
+  margin:0 auto;
+
+  max-width:760px;
+
   font-size:15px;
 
-  line-height:1.8;
+  line-height:1.9;
+
+  color:rgba(255,255,255,.94);
 
 }
 
@@ -134,7 +204,7 @@ body{
 
 .about-stats{
 
-  padding:40px 20px;
+  padding:10px 0 45px;
 
 }
 
@@ -146,29 +216,37 @@ body{
 
   gap:20px;
 
-  max-width:500px;
+  max-width:620px;
 
-  margin:auto;
+  margin:0 auto;
 
 }
 
 .about-stat-card{
 
-  background:#111827;
+  background:linear-gradient(135deg,var(--main),var(--accent));
 
-  padding:25px;
+  color:var(--cardText);
 
-  border-radius:16px;
+  padding:28px 20px;
+
+  border-radius:20px;
 
   text-align:center;
+
+  box-shadow:0 12px 26px rgba(13,36,84,.14);
+
+  border:1px solid rgba(255,255,255,.08);
 
 }
 
 .about-stat-num{
 
-  font-size:40px;
+  font-size:42px;
 
   font-weight:900;
+
+  line-height:1.1;
 
   color:var(--gold);
 
@@ -176,21 +254,15 @@ body{
 
 .about-stat-label{
 
-  margin-top:5px;
+  margin-top:8px;
 
   font-size:14px;
 
-  color:#aaa;
+  color:rgba(255,255,255,.88);
 
 }
 
-/* PROJECTS */
-
-.about-projects{
-
-  padding:50px 20px;
-
-}
+/* SECTION HEAD */
 
 .about-section-head{
 
@@ -200,15 +272,37 @@ body{
 
 }
 
+.about-section-head h2{
+
+  margin:0;
+
+  font-size:28px;
+
+  color:var(--main);
+
+  font-weight:900;
+
+}
+
 .line{
 
-  width:40px;
+  width:52px;
 
-  height:2px;
+  height:3px;
 
-  background:var(--gold);
+  background:linear-gradient(135deg,var(--main),var(--accent));
 
-  margin:10px auto;
+  margin:12px auto 0;
+
+  border-radius:999px;
+
+}
+
+/* PROJECTS */
+
+.about-projects{
+
+  padding:10px 0 50px;
 
 }
 
@@ -216,27 +310,67 @@ body{
 
   display:grid;
 
-  gap:20px;
+  gap:22px;
 
 }
 
 .about-project-card{
 
-  background:#111827;
+  background:linear-gradient(135deg,var(--main),var(--accent));
 
-  padding:20px;
+  color:var(--cardText);
 
-  border-radius:16px;
+  padding:24px;
+
+  border-radius:20px;
+
+  box-shadow:0 12px 28px rgba(13,36,84,.12);
+
+  border:1px solid rgba(255,255,255,.08);
 
 }
 
 .project-tag{
 
+  display:inline-block;
+
+  margin-bottom:10px;
+
+  padding:6px 10px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.14);
+
+  color:var(--gold);
+
   font-size:12px;
 
-  color:#aaa;
+  font-weight:700;
 
-  margin-bottom:5px;
+  letter-spacing:.02em;
+
+}
+
+.about-project-card h3{
+
+  margin:0 0 10px;
+
+  font-size:22px;
+
+  color:#fff;
+
+}
+
+.about-project-card p{
+
+  margin:0;
+
+  font-size:15px;
+
+  line-height:1.9;
+
+  color:rgba(255,255,255,.92);
 
 }
 
@@ -246,7 +380,21 @@ body{
 
   text-align:center;
 
-  margin:50px 0;
+  margin:50px 0 28px;
+
+}
+
+.about-follow-label{
+
+  margin:0 0 14px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.14em;
+
+  color:var(--sub);
 
 }
 
@@ -254,15 +402,31 @@ body{
 
   display:inline-block;
 
-  padding:12px 20px;
+  padding:13px 22px;
 
-  background:linear-gradient(135deg,#ff416c,#ff4b2b);
+  background:linear-gradient(135deg,var(--main),var(--accent));
 
-  border-radius:10px;
+  border-radius:12px;
 
   color:#fff;
 
   text-decoration:none;
+
+  font-weight:700;
+
+  box-shadow:0 10px 22px rgba(13,36,84,.14);
+
+  transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+
+}
+
+.btn-action:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:0 14px 28px rgba(13,36,84,.18);
+
+  opacity:.98;
 
 }
 
@@ -272,9 +436,17 @@ body{
 
   text-align:center;
 
-  margin:30px 0;
+  margin:24px 0 30px;
 
-  color:#aaa;
+}
+
+.about-note p{
+
+  margin:0;
+
+  color:var(--sub);
+
+  font-size:14px;
 
 }
 
@@ -284,7 +456,77 @@ body{
 
   text-align:center;
 
-  margin-bottom:40px;
+  margin-bottom:20px;
+
+}
+
+/* REVEAL */
+
+.reveal{
+
+  opacity:1;
+
+  transform:none;
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+  .header-inner{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+  }
+
+  .header-nav{
+
+    gap:10px 14px;
+
+  }
+
+  .about-hero-inner{
+
+    padding:48px 18px;
+
+  }
+
+  .about-title{
+
+    font-size:28px;
+
+  }
+
+  .about-lead{
+
+    font-size:14px;
+
+  }
+
+  .about-stats-grid{
+
+    grid-template-columns:1fr;
+
+    max-width:380px;
+
+  }
+
+  .about-section-head h2{
+
+    font-size:24px;
+
+  }
+
+  .about-project-card h3{
+
+    font-size:20px;
+
+  }
 
 }
  
