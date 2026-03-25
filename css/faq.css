@@ -2,41 +2,145 @@
 
   --main:#0D2454;
 
-  --panel:#162f65;
+  --accent:#00448d;
 
   --gold:#F3E195;
 
-  --gold-deep:#D4AF37;
+  --bg:#0b1a3a;
 
-  --white:#FFFFFF;
-
-  --line:rgba(243,225,149,0.22);
+  --panel:#162f65;
 
 }
 
-.fc-wrap{
+/* ===== 全体 ===== */
 
-  background:linear-gradient(180deg,#0D2454 0%, #0a214e 100%);
+body{
 
   margin:0;
 
-  padding:40px 15px 60px;
+  font-family:'Noto Sans JP', sans-serif;
 
-  font-family:'Helvetica Neue', Arial, 'Hiragino Sans', sans-serif;
+  background:var(--bg);
+
+  color:#fff;
 
 }
+
+/* ===== HEADER ===== */
+
+.site-header{
+
+  background:linear-gradient(135deg,var(--main),var(--accent));
+
+  padding:12px 20px;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+}
+
+.header-inner{
+
+  max-width:1000px;
+
+  margin:auto;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+.header-logo{
+
+  color:#fff;
+
+  font-weight:900;
+
+  text-decoration:none;
+
+  font-size:18px;
+
+}
+
+.header-nav{
+
+  display:flex;
+
+  gap:16px;
+
+}
+
+.header-nav a{
+
+  color:rgba(255,255,255,.7);
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  position:relative;
+
+}
+
+.header-nav a:hover{
+
+  color:#fff;
+
+}
+
+.header-nav a.active{
+
+  color:#fff;
+
+  font-weight:700;
+
+}
+
+.header-nav a.active::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-4px;
+
+  left:0;
+
+  width:100%;
+
+  height:2px;
+
+  background:var(--gold);
+
+}
+
+/* ===== ラップ ===== */
+
+.fc-wrap{
+
+  padding:40px 15px 60px;
+
+}
+
+/* ===== FAQ ===== */
 
 .faq-panel{
 
   max-width:900px;
 
-  margin:0 auto 32px;
+  margin:0 auto 40px;
 
   padding:40px 20px;
 
-  background:#162f65;
+  background:var(--panel);
 
-  border:2px solid #F3E195;
+  border:2px solid var(--gold);
 
   border-radius:24px;
 
@@ -44,61 +148,43 @@
 
 }
 
+/* タイトル */
+
 .section-header{
 
   text-align:center;
 
-  margin-bottom:34px;
+  margin-bottom:30px;
 
 }
 
 .section-header h2{
 
-  margin:0;
+  color:var(--gold);
 
   font-size:22px;
 
-  letter-spacing:3px;
-
   font-weight:900;
 
-  color:#F3E195;
+  letter-spacing:2px;
 
 }
 
 .section-header p{
 
-  margin:10px 0 0;
+  color:#fff;
 
   font-size:13px;
 
-  color:#FFFFFF;
-
-  opacity:0.8;
-
-  font-weight:700;
+  opacity:.8;
 
 }
 
-.faq-list{
-
-  max-width:100%;
-
-  margin:0 auto;
-
-}
+/* ===== FAQ ITEM ===== */
 
 .faq-item{
 
-  border-bottom:1px solid var(--line);
-
-  padding:0;
-
-}
-
-.faq-item:last-child{
-
-  border-bottom:none;
+  border-bottom:1px solid rgba(243,225,149,.2);
 
 }
 
@@ -106,13 +192,11 @@
 
   width:100%;
 
-  background:transparent;
+  background:none;
 
   border:none;
 
-  padding:24px 0 20px;
-
-  text-align:left;
+  padding:20px 0;
 
   display:flex;
 
@@ -120,77 +204,29 @@
 
   gap:12px;
 
-  cursor:pointer;
-
-  color:inherit;
-
-}
-
-.faq-question:hover .faq-question-text{
-
-  opacity:0.92;
-
-}
-
-.faq-mark{
+  color:var(--gold);
 
   font-weight:900;
 
-  font-size:20px;
-
-  line-height:1.2;
-
-  flex:0 0 auto;
-
-}
-
-.faq-mark.q{
-
-  color:#F3E195;
-
-}
-
-.faq-mark.a{
-
-  color:#FFFFFF;
-
-  opacity:0.55;
-
-  margin-top:1px;
+  cursor:pointer;
 
 }
 
 .faq-question-text{
 
-  color:#F3E195;
-
-  font-size:16px;
-
-  line-height:1.6;
-
-  font-weight:900;
-
   flex:1;
-
-  transition:opacity .2s ease;
 
 }
 
 .faq-toggle{
 
-  color:#F3E195;
+  font-size:20px;
 
-  font-size:22px;
-
-  line-height:1;
-
-  font-weight:900;
-
-  transition:transform .25s ease, opacity .25s ease;
-
-  opacity:0.9;
+  transition:.3s;
 
 }
+
+/* 開いたとき回転 */
 
 .faq-item.open .faq-toggle{
 
@@ -198,99 +234,77 @@
 
 }
 
+/* 回答 */
+
 .faq-answer{
 
-  display:grid;
+  max-height:0;
 
-  grid-template-rows:0fr;
+  overflow:hidden;
 
-  transition:grid-template-rows .3s ease;
+  transition:max-height .3s ease;
 
 }
 
 .faq-item.open .faq-answer{
 
-  grid-template-rows:1fr;
+  max-height:300px;
 
 }
 
 .faq-answer-inner{
 
-  min-height:0;
-
-  overflow:hidden;
-
   display:flex;
-
-  align-items:flex-start;
 
   gap:12px;
 
-  padding:0 0 24px;
+  padding-bottom:20px;
 
 }
 
-.faq-answer-inner p{
+.faq-answer p{
 
-  margin:0;
+  color:#fff;
 
   font-size:14px;
 
-  line-height:1.9;
-
-  color:#FFFFFF;
-
-  font-weight:500;
-
-  text-align:justify;
+  line-height:1.8;
 
 }
 
-/* CONTACT */
+/* ===== CONTACT ===== */
 
 .contact-panel{
 
   max-width:900px;
 
-  margin:0 auto;
+  margin:auto;
 
   text-align:center;
-
-  padding:22px 10px 20px;
 
 }
 
 .contact-panel h3{
 
-  color:#F3E195;
+  color:var(--gold);
 
   font-size:24px;
 
-  margin:0 0 15px;
-
   font-weight:900;
-
-  letter-spacing:1px;
-
-  line-height:1.5;
 
 }
 
 .contact-lead{
 
-  color:#FFFFFF;
+  color:#fff;
 
-  font-size:14px;
+  margin-bottom:30px;
 
-  line-height:1.9;
-
-  margin:0 auto 40px;
-
-  font-weight:500;
-
-  max-width:680px;
+  line-height:1.8;
 
 }
+
+/* メインボタン */
 
 .contact-main-btn{
 
@@ -300,9 +314,9 @@
 
   margin:0 auto;
 
-  padding:20px;
+  padding:18px;
 
-  background:linear-gradient(135deg, #F3E195 0%, #D4AF37 100%);
+  background:linear-gradient(135deg,#F3E195,#D4AF37);
 
   color:#0D2454;
 
@@ -310,13 +324,11 @@
 
   font-weight:900;
 
-  font-size:16px;
-
   border-radius:50px;
 
   box-shadow:0 10px 30px rgba(0,0,0,0.3);
 
-  transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  transition:.2s;
 
 }
 
@@ -324,75 +336,59 @@
 
   transform:translateY(-3px);
 
-  box-shadow:0 16px 34px rgba(0,0,0,0.35);
-
-  opacity:.98;
-
 }
+
+/* サブ */
 
 .contact-sub{
 
-  margin-top:50px;
+  margin-top:40px;
 
 }
 
 .contact-sub p{
 
-  color:#FFFFFF;
-
   font-size:12px;
 
-  margin:0 0 15px;
-
-  opacity:0.7;
-
-  font-weight:700;
+  opacity:.7;
 
 }
 
 .contact-sub-btn{
 
-  display:inline-block;
+  border:1px solid var(--gold);
 
-  color:#F3E195;
+  color:var(--gold);
 
-  text-decoration:none;
-
-  font-size:13px;
-
-  font-weight:900;
-
-  border:1px solid #F3E195;
-
-  padding:12px 30px;
+  padding:10px 20px;
 
   border-radius:40px;
 
-  background:rgba(255,255,255,0.05);
+  text-decoration:none;
 
-  transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
+  display:inline-block;
+
+  margin-top:10px;
+
+  transition:.2s;
 
 }
 
 .contact-sub-btn:hover{
 
-  transform:translateY(-2px);
-
   background:rgba(255,255,255,0.1);
-
-  box-shadow:0 8px 20px rgba(0,0,0,0.18);
 
 }
 
-/* reveal */
+/* ===== reveal（ふわっと） ===== */
 
 .reveal{
 
   opacity:0;
 
-  transform:translateY(24px);
+  transform:translateY(20px);
 
-  transition:opacity .7s ease, transform .7s ease;
+  transition:.6s;
 
 }
 
@@ -400,75 +396,45 @@
 
   opacity:1;
 
-  transform:translateY(0);
+  transform:none;
 
 }
 
+/* ===== スマホ ===== */
+
 @media (max-width:768px){
 
-  .faq-panel{
+  .header-inner{
 
-    padding:30px 16px;
+    flex-direction:column;
 
-    border-radius:20px;
+    gap:10px;
 
   }
 
-  .section-header h2{
+  .header-nav{
 
-    font-size:19px;
+    flex-wrap:wrap;
 
-    letter-spacing:2px;
+    justify-content:center;
+
+  }
+
+  .faq-panel{
+
+    padding:30px 15px;
 
   }
 
   .faq-question{
 
-    padding:20px 0 16px;
-
-    gap:10px;
-
-  }
-
-  .faq-question-text{
-
-    font-size:15px;
-
-  }
-
-  .faq-answer-inner{
-
-    gap:10px;
-
-    padding-bottom:20px;
-
-  }
-
-  .faq-answer-inner p{
-
-    font-size:13.5px;
-
-    line-height:1.85;
+    font-size:14px;
 
   }
 
   .contact-panel h3{
 
-    font-size:21px;
-
-  }
-
-  .contact-main-btn{
-
-    font-size:15px;
-
-    padding:18px;
-
-  }
-
-  .contact-sub-btn{
-
-    padding:12px 22px;
+    font-size:20px;
 
   }
 
