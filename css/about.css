@@ -1,0 +1,480 @@
+/* ===== ABOUT PAGE ===== */
+
+/* ===== HERO ===== */
+
+.about-hero{
+
+  margin:10px 0 30px;
+
+  border:2px solid var(--gold);
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  box-shadow:0 10px 40px rgba(0,0,0,.6);
+
+}
+
+.about-hero-inner{
+
+  background:linear-gradient(135deg,#0D2454 0%,#00448d 100%);
+
+  padding:50px 25px;
+
+  text-align:center;
+
+  border-bottom:2px solid var(--gold);
+
+}
+
+.about-logo-wrap{
+
+  margin-bottom:20px;
+
+}
+
+.about-logo{
+
+  width:90px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  padding:6px;
+
+  box-shadow:0 0 15px rgba(243,225,149,.2);
+
+}
+
+.about-title{
+
+  margin:0;
+
+  font-size:30px;
+
+  font-weight:900;
+
+  letter-spacing:3px;
+
+  color:var(--gold);
+
+}
+
+.about-divider{
+
+  width:40px;
+
+  height:2px;
+
+  background:var(--gold);
+
+  margin:15px auto;
+
+}
+
+.about-lead{
+
+  max-width:620px;
+
+  margin:0 auto;
+
+  font-size:15px;
+
+  line-height:1.8;
+
+  color:#fff;
+
+}
+
+/* ===== STATS ===== */
+
+.about-stats{
+
+  margin-bottom:50px;
+
+}
+
+.about-stats-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:18px;
+
+}
+
+.about-stat-card{
+
+  background:#162f65;
+
+  border:1px solid rgba(243,225,149,.25);
+
+  border-radius:18px;
+
+  padding:22px;
+
+  text-align:center;
+
+  transition:.3s;
+
+}
+
+.about-stat-card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:var(--gold);
+
+}
+
+.about-stat-num{
+
+  font-size:34px;
+
+  font-weight:900;
+
+  color:var(--gold);
+
+}
+
+.about-stat-unit{
+
+  margin-left:4px;
+
+  font-weight:900;
+
+}
+
+.about-stat-label{
+
+  margin-top:6px;
+
+  font-size:13px;
+
+  color:var(--muted);
+
+}
+
+/* ===== SECTION HEAD ===== */
+
+.about-section-head{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+  margin-bottom:26px;
+
+}
+
+.about-section-head h2{
+
+  margin:0;
+
+  font-size:20px;
+
+  font-weight:900;
+
+}
+
+.about-section-head .line{
+
+  height:1px;
+
+  flex:1;
+
+  background:var(--line);
+
+}
+
+/* ===== PILLARS ===== */
+
+.about-pillars{
+
+  margin-bottom:50px;
+
+}
+
+.about-pillars-grid{
+
+  display:grid;
+
+  gap:16px;
+
+}
+
+.pillar-card{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:20px;
+
+  background:#162f65;
+
+  border:1px solid rgba(243,225,149,.25);
+
+  border-radius:16px;
+
+  transition:.3s;
+
+}
+
+.pillar-card:hover{
+
+  transform:translateY(-3px);
+
+  border-color:var(--gold);
+
+}
+
+.pillar-icon{
+
+  font-size:28px;
+
+}
+
+.pillar-card h3{
+
+  margin:0;
+
+  font-size:16px;
+
+  color:var(--gold);
+
+}
+
+.pillar-card p{
+
+  margin-top:4px;
+
+  font-size:13px;
+
+  color:#fff;
+
+  opacity:.9;
+
+}
+
+/* ===== PROJECT ===== */
+
+.about-projects{
+
+  margin-bottom:50px;
+
+}
+
+.about-project-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+
+}
+
+.about-project-card{
+
+  background:#162f65;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  border-radius:18px;
+
+  padding:24px;
+
+  transition:.3s;
+
+  position:relative;
+
+}
+
+.about-project-card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:var(--gold);
+
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
+
+}
+
+.project-tag{
+
+  font-size:10px;
+
+  font-weight:900;
+
+  color:#0D2454;
+
+  background:var(--gold);
+
+  display:inline-block;
+
+  padding:3px 8px;
+
+  border-radius:4px;
+
+  margin-bottom:12px;
+
+}
+
+.about-project-card h3{
+
+  margin:0 0 10px;
+
+  font-size:19px;
+
+  font-weight:900;
+
+}
+
+.about-project-card p{
+
+  font-size:14px;
+
+  line-height:1.7;
+
+  color:#fff;
+
+  opacity:.85;
+
+}
+
+/* ===== FOLLOW ===== */
+
+.about-follow{
+
+  text-align:center;
+
+  padding:40px 20px;
+
+  background:rgba(243,225,149,.05);
+
+  border-radius:20px;
+
+  border:1px solid rgba(243,225,149,.4);
+
+  margin-bottom:40px;
+
+}
+
+.about-follow-label{
+
+  font-size:14px;
+
+  color:var(--gold);
+
+  margin-bottom:14px;
+
+  font-weight:900;
+
+  letter-spacing:1px;
+
+}
+
+/* ===== NOTE ===== */
+
+.about-note{
+
+  text-align:center;
+
+  margin-bottom:40px;
+
+}
+
+.about-note p{
+
+  font-size:11px;
+
+  letter-spacing:2px;
+
+  opacity:.5;
+
+}
+
+/* ===== BACK BUTTON ===== */
+
+.about-back{
+
+  text-align:center;
+
+  margin-bottom:40px;
+
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width:768px){
+
+  .about-stats-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .about-hero-inner{
+
+    padding:35px 20px;
+
+  }
+
+  .about-title{
+
+    font-size:24px;
+
+  }
+
+  .about-lead{
+
+    font-size:14px;
+
+  }
+
+  .pillar-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+  .about-project-card{
+
+    padding:20px;
+
+  }
+
+}
+
+@media (max-width:480px){
+
+  .about-title{
+
+    font-size:20px;
+
+  }
+
+  .about-stat-num{
+
+    font-size:28px;
+
+  }
+
+  .about-project-card h3{
+
+    font-size:16px;
+
+  }
+
+}
+ 
