@@ -1,162 +1,32 @@
-/* ===== HEADER / SUB MENU ===== */
+/* ===== ABOUT PAGE (Readable Version) ===== */
 
-.site-header{
-
-  position:sticky;
-
-  top:0;
-
-  z-index:1000;
-
-  background:rgba(13,36,84,.88);
-
-  backdrop-filter:blur(12px);
-
-  border-bottom:1px solid rgba(243,225,149,.16);
-
-}
-
-.header-inner{
-
-  max-width:1100px;
-
-  margin:auto;
-
-  padding:14px 20px;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  gap:20px;
-
-}
-
-.header-logo{
-
-  color:var(--gold);
-
-  text-decoration:none;
-
-  font-weight:900;
-
-  letter-spacing:2px;
-
-  font-size:18px;
-
-  white-space:nowrap;
-
-  transition:opacity .2s ease;
-
-}
-
-.header-logo:hover{
-
-  opacity:.82;
-
-}
-
-.header-nav{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:10px;
-
-  flex-wrap:wrap;
-
-}
-
-.header-nav a{
-
-  color:var(--muted);
-
-  text-decoration:none;
-
-  font-size:14px;
-
-  font-weight:700;
-
-  padding:10px 14px;
-
-  border-radius:999px;
-
-  border:1px solid transparent;
-
-  transition:
-
-    background .25s ease,
-
-    border-color .25s ease,
-
-    color .25s ease,
-
-    transform .2s ease;
-
-}
-
-.header-nav a:hover{
-
-  color:var(--gold);
-
-  border-color:rgba(243,225,149,.35);
-
-  background:rgba(255,255,255,.04);
-
-  transform:translateY(-1px);
-
-}
-
-.header-nav a.active{
-
-  color:#0D2454;
-
-  background:linear-gradient(135deg, #F3E195 0%, #D4AF37 100%);
-
-  border-color:rgba(243,225,149,.5);
-
-}
-
-/* ===== ABOUT PAGE ===== */
-
-/* HERO */
+/* ===== HERO ===== */
 
 .about-hero{
 
-  margin:20px 0 36px;
-
-  border:2px solid var(--gold);
+  margin:20px 0 40px;
 
   border-radius:24px;
 
   overflow:hidden;
 
-  box-shadow:0 10px 40px rgba(0,0,0,.45);
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
 
 }
 
 .about-hero-inner{
 
-  background:linear-gradient(135deg,#0D2454 0%,#00448d 100%);
+  background:linear-gradient(135deg,#0D2454,#00448d);
 
-  padding:56px 32px;
+  padding:60px 30px;
 
   text-align:center;
 
 }
 
-.about-logo-wrap{
-
-  margin-bottom:20px;
-
-}
-
 .about-logo{
 
-  width:96px;
+  width:100px;
 
   border-radius:50%;
 
@@ -164,57 +34,53 @@
 
   padding:6px;
 
-  box-shadow:0 0 15px rgba(243,225,149,.2);
+  margin-bottom:20px;
 
 }
 
 .about-title{
 
-  margin:0;
-
   font-size:34px;
 
   font-weight:900;
 
-  letter-spacing:2px;
+  color:#F3E195;
 
-  color:var(--gold);
+  margin:0;
 
 }
 
 .about-divider{
 
-  width:56px;
+  width:60px;
 
   height:2px;
 
-  background:var(--gold);
+  background:#F3E195;
 
-  margin:16px auto 18px;
+  margin:16px auto;
 
 }
 
 .about-lead{
 
-  max-width:720px;
+  max-width:700px;
 
   margin:0 auto;
 
   font-size:17px;
 
-  line-height:1.9;
-
   color:#ffffff;
 
-  font-weight:500;
+  line-height:1.9;
 
 }
 
-/* STATS */
+/* ===== STATS ===== */
 
 .about-stats{
 
-  margin-bottom:52px;
+  margin-bottom:50px;
 
 }
 
@@ -224,51 +90,29 @@
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:18px;
+  gap:20px;
 
 }
 
 .about-stat-card{
 
-  background:linear-gradient(180deg, #16376f 0%, #102c5a 100%);
+  background:#0D2454;
 
-  border:1px solid rgba(243,225,149,.28);
+  color:#ffffff;
+
+  padding:30px;
 
   border-radius:20px;
 
-  padding:28px 20px 24px;
-
   text-align:center;
 
-  min-height:150px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-
-  justify-content:center;
-
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
-
-}
-
-.about-stat-card:hover{
-
-  transform:translateY(-3px);
-
-  border-color:var(--gold);
-
-  transition:.25s ease;
+  border:1px solid rgba(255,255,255,.2);
 
 }
 
 .about-stat-num{
 
-  font-size:44px;
-
-  line-height:1;
+  font-size:42px;
 
   font-weight:900;
 
@@ -278,115 +122,67 @@
 
 .about-stat-unit{
 
-  margin-top:4px;
+  color:#F3E195;
 
   font-size:20px;
 
   font-weight:900;
 
-  color:var(--gold);
-
-  line-height:1;
-
 }
 
 .about-stat-label{
 
-  margin-top:14px;
+  margin-top:10px;
 
   font-size:14px;
 
   color:#ffffff;
 
-  opacity:.92;
+}
 
-  font-weight:700;
+/* ===== SECTION（白背景にする） ===== */
 
-  letter-spacing:.02em;
+.about-pillars,
+
+.about-projects{
+
+  background:#ffffff;
+
+  padding:50px 40px;
+
+  border-radius:24px;
+
+  margin-bottom:50px;
 
 }
 
-/* SECTION HEAD */
-
-.about-section-head{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:16px;
-
-  margin-bottom:24px;
-
-}
+/* ===== 見出し ===== */
 
 .about-section-head h2{
 
-  margin:0;
-
-  font-size:28px;
+  font-size:26px;
 
   font-weight:900;
 
   color:#0D2454;
 
-  white-space:nowrap;
-
 }
 
-.about-section-head .line{
-
-  height:2px;
-
-  flex:1;
-
-  background:linear-gradient(90deg, rgba(13,36,84,.25), rgba(13,36,84,.05));
-
-}
-
-/* PILLARS */
-
-.about-pillars{
-
-  margin-bottom:54px;
-
-}
-
-.about-pillars-grid{
-
-  display:grid;
-
-  gap:18px;
-
-}
+/* ===== 活動の軸 ===== */
 
 .pillar-card{
 
   display:flex;
 
-  align-items:center;
+  gap:16px;
 
-  gap:18px;
+  padding:24px;
 
-  padding:24px 22px;
+  border-radius:16px;
 
-  background:linear-gradient(135deg, #0D2454 0%, #00448d 100%);
+  background:#0D2454;
 
-  border:1px solid rgba(243,225,149,.28);
-
-  border-radius:18px;
-
-  box-shadow:0 8px 22px rgba(0,0,0,.14);
-
-}
-
-.pillar-card:hover{
-
-  transform:translateY(-2px);
-
-  border-color:var(--gold);
-
-  transition:.25s ease;
+  margin-bottom:15px;
 
 }
 
@@ -394,185 +190,125 @@
 
   font-size:30px;
 
-  flex:0 0 auto;
-
 }
 
 .pillar-card h3{
 
-  margin:0 0 6px;
+  color:#ffffff;
 
   font-size:20px;
 
-  color:#ffffff;
-
-  font-weight:900;
+  margin:0 0 5px;
 
 }
 
 .pillar-card p{
 
-  margin:0;
+  color:#f0f4ff;
 
   font-size:15px;
-
-  color:#f3f6ff;
-
-  opacity:.95;
 
   line-height:1.8;
 
 }
 
-/* PROJECT */
-
-.about-projects{
-
-  margin-bottom:54px;
-
-}
-
-.about-project-list{
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:20px;
-
-}
+/* ===== プロジェクト ===== */
 
 .about-project-card{
 
-  background:#162f65;
+  background:#0D2454;
 
-  border:1px solid rgba(255,255,255,.14);
+  padding:24px;
 
-  border-radius:20px;
+  border-radius:16px;
 
-  padding:26px 24px;
-
-  box-shadow:0 10px 26px rgba(0,0,0,.14);
-
-}
-
-.about-project-card:hover{
-
-  transform:translateY(-3px);
-
-  border-color:var(--gold);
-
-  transition:.25s ease;
+  margin-bottom:20px;
 
 }
 
 .project-tag{
 
-  font-size:11px;
-
-  font-weight:900;
+  background:#F3E195;
 
   color:#0D2454;
 
-  background:var(--gold);
-
-  display:inline-block;
+  font-size:11px;
 
   padding:4px 10px;
 
   border-radius:999px;
 
-  margin-bottom:14px;
+  display:inline-block;
+
+  margin-bottom:10px;
+
+  font-weight:900;
 
 }
 
 .about-project-card h3{
 
-  margin:0 0 10px;
-
-  font-size:21px;
-
-  font-weight:900;
-
   color:#ffffff;
+
+  font-size:20px;
+
+  margin:0 0 8px;
 
 }
 
 .about-project-card p{
 
+  color:#f0f4ff;
+
   font-size:15px;
 
-  line-height:1.85;
-
-  color:#f3f6ff;
-
-  opacity:.95;
+  line-height:1.8;
 
 }
 
-/* FOLLOW */
+/* ===== FOLLOW ===== */
 
 .about-follow{
 
   text-align:center;
 
-  padding:42px 24px;
+  background:#ffffff;
 
-  background:rgba(243,225,149,.06);
+  padding:40px;
 
   border-radius:20px;
 
-  border:1px solid rgba(243,225,149,.35);
-
-  margin-bottom:36px;
+  margin-bottom:40px;
 
 }
 
 .about-follow-label{
 
-  font-size:14px;
-
   color:#0D2454;
-
-  margin-bottom:14px;
 
   font-weight:900;
 
-  letter-spacing:.08em;
-
 }
 
-/* NOTE */
+/* ===== NOTE ===== */
 
 .about-note{
 
   text-align:center;
 
-  margin-bottom:32px;
-
-}
-
-.about-note p{
-
-  font-size:12px;
-
-  letter-spacing:.12em;
-
-  opacity:.65;
-
   color:#0D2454;
 
-  font-weight:700;
+  opacity:.6;
+
+  margin-bottom:40px;
 
 }
 
-/* BACK */
+/* ===== BACK ===== */
 
 .about-back{
 
   text-align:center;
-
-  margin-bottom:40px;
 
 }
 
@@ -580,29 +316,9 @@
 
 @media (max-width:768px){
 
-  .header-inner{
+  .about-stats-grid{
 
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    padding:12px 16px;
-
-  }
-
-  .header-nav{
-
-    width:100%;
-
-    gap:8px;
-
-  }
-
-  .header-nav a{
-
-    font-size:13px;
-
-    padding:9px 12px;
+    grid-template-columns:1fr;
 
   }
 
@@ -621,227 +337,6 @@
   .about-lead{
 
     font-size:15px;
-
-  }
-
-  .about-stats-grid{
-
-    grid-template-columns:1fr;
-
-  }
-
-  .about-stat-card{
-
-    min-height:130px;
-
-  }
-
-  .about-section-head h2{
-
-    font-size:22px;
-
-  }
-
-  .pillar-card{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-  }
-
-  .pillar-card h3{
-
-    font-size:18px;
-
-  }
-
-  .pillar-card p,
-
-  .about-project-card p{
-
-    font-size:14px;
-
-  }
-
-  .about-project-card h3{
-
-    font-size:18px;
-
-  }
-
-}
-
-@media (max-width:480px){
-
-  .header-logo{
-
-    font-size:16px;
-
-  }
-
-  .header-nav{
-
-    display:grid;
-
-    grid-template-columns:repeat(2, 1fr);
-
-    width:100%;
-
-  }
-
-  .header-nav a{
-
-    text-align:center;
-
-  }
-
-  .about-title{
-
-    font-size:22px;
-
-  }
-
-  .about-stat-num{
-
-    font-size:36px;
-
-  }
-
-  .about-section-head{
-
-    gap:10px;
-
-  }
-
-  .about-section-head h2{
-
-    font-size:20px;
-
-  }
-
-}
- /* ===== 見やすさ改善パッチ ===== */
-
-/* セクション背景を分離 */
-
-.about-pillars,
-
-.about-projects{
-
-  background:#ffffff;
-
-  padding:40px 30px;
-
-  border-radius:24px;
-
-  margin-bottom:40px;
-
-}
-
-/* 見出しを強調 */
-
-.about-section-head h2{
-
-  font-size:26px;
-
-  font-weight:900;
-
-  color:#0D2454;
-
-}
-
-/* ===== カード明るくする ===== */
-
-.pillar-card{
-
-  background:linear-gradient(135deg, #1b3f7c 0%, #0f2e5c 100%);
-
-}
-
-.about-project-card{
-
-  background:linear-gradient(135deg, #1b3f7c 0%, #0f2e5c 100%);
-
-}
-
-/* ===== テキスト改善 ===== */
-
-.pillar-card h3,
-
-.about-project-card h3{
-
-  font-size:20px;
-
-  color:#ffffff;
-
-}
-
-.pillar-card p,
-
-.about-project-card p{
-
-  font-size:15px;
-
-  line-height:1.9;
-
-  color:#f0f4ff;
-
-}
-
-/* ===== アイコン強調 ===== */
-
-.pillar-icon{
-
-  font-size:34px;
-
-}
-
-/* ===== カード余白強化 ===== */
-
-.pillar-card,
-
-.about-project-card{
-
-  padding:28px;
-
-}
-
-/* ===== ホバーを分かりやすく ===== */
-
-.pillar-card:hover,
-
-.about-project-card:hover{
-
-  transform:translateY(-4px);
-
-  box-shadow:0 15px 40px rgba(0,0,0,.3);
-
-}
-
-/* ===== スマホ調整 ===== */
-
-@media (max-width:768px){
-
-  .about-pillars,
-
-  .about-projects{
-
-    padding:24px 18px;
-
-  }
-
-  .about-section-head h2{
-
-    font-size:22px;
-
-  }
-
-  .pillar-card h3,
-
-  .about-project-card h3{
-
-    font-size:18px;
 
   }
 
