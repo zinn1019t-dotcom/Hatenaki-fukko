@@ -600,6 +600,42 @@ body{
 
 }
 
+.timeline-btn{
+
+  display:inline-block;
+
+  margin-top:14px;
+
+  padding:11px 18px;
+
+  background:linear-gradient(135deg,var(--main),var(--accent));
+
+  color:#fff;
+
+  text-decoration:none;
+
+  border-radius:10px;
+
+  font-size:.95rem;
+
+  font-weight:700;
+
+  box-shadow:0 8px 18px rgba(13,36,84,.12);
+
+  transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+
+}
+
+.timeline-btn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:0 12px 24px rgba(13,36,84,.16);
+
+  opacity:.98;
+
+}
+
 /* ===== MESSAGE ===== */
 
 .fukushima-message{
@@ -787,6 +823,14 @@ footer{
   .timeline-dot{
 
     left:9px;
+
+  }
+
+  .timeline-btn{
+
+    width:100%;
+
+    text-align:center;
 
   }
 
